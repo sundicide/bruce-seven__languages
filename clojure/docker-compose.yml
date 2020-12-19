@@ -1,0 +1,10 @@
+version: "3"
+services:
+  clojure:
+    image: clojure
+    volumes:
+      - ./volumes:/usr/src/app
+    tty: true
+    ports:
+      - 40531:40531
+    command: ["lein", "repl", ":start", ":port", "40531"]
